@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        //обязательно явно указывать тип
+        "noImplicitAny": true,
+        "module": "ESNext",
+        //компилируем в ecma script 5
+        "target": "es5",
+        "jsx": "react-jsx",
+        //не только тс но и жс обрабатываем
+        "allowJs": true,
+        "moduleResolution": "node",
+        //вместо require() обычные import 
+        "esModuleInterop": true,
+        //позволяет использовать обычный импорт без звездочки * as. 
+        "allowSyntheticDefaultImports": true,
+        //для абсолютного импорта
+        "baseUrl": "."
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS",
+        }
+    }
+}
