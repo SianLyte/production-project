@@ -7,21 +7,21 @@ import { Button } from 'shared/ui/Button';
 import { ThemeButton } from 'shared/ui/Button/ui/Button';
 
 interface ThemeSwitcherProps {
-    className?: string;
+  className?: string;
 }
 
 export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
-    const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
-    return (
-        <Button theme={ThemeButton.CLEAR}
-            type='button'
-            onClick={toggleTheme}
-            className={classNames(cls.ThemeSwitcher, {}, [className])}
-        >
-            {theme === Theme.DARK
-                ? <Sun width={40} height={40} />
-                : <Moon width={40} height={40} />}
-        </Button>
-    )
+  return (
+    <Button theme={ThemeButton.CLEAR}
+      type='button'
+      onClick={toggleTheme}
+      className={classNames(cls.ThemeSwitcher, {}, [className])}
+    >
+      {theme === Theme.DARK
+        ? <Sun width={40} height={40} />
+        : <Moon width={40} height={40} />}
+    </Button>
+  )
 }
