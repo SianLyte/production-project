@@ -15,7 +15,12 @@
         //позволяет использовать обычный импорт без звездочки * as. 
         "allowSyntheticDefaultImports": true,
         //для абсолютного импорта
-        "baseUrl": "."
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "./src/*"
+            ]
+        }
     },
     "ts-node": {
         "compilerOptions": {

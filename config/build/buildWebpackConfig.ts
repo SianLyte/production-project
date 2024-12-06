@@ -18,7 +18,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             rules: buildLoaders(options)
         },
         //сокращение для импортов
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
         //адрес билда
         output: {
             filename: "[name].[contenthash].js",
