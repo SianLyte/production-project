@@ -5,17 +5,25 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { AppRouter } from "app/providers/router";
 import { Navbar } from "widgets/navbar";
 import { Sidebar } from "widgets/sidebar";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { PageLoader } from "widgets/PageLoader";
 
 
 
 const App = () => {
     const { theme } = useTheme();
 
+    useEffect(() => {
+        if (Math.random() < 0.5) {
+            console.log('pzdc');
+            throw new Error();    
+        }
+    }, [])
+
     return (
         <div className={classNames("app", {}, [theme])}>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<PageLoader/>}>
                 <Navbar />
                 <div className="content-page">
                     <Sidebar />
