@@ -1,4 +1,3 @@
-import path from "path";
 import { buildLoaders } from "./buildLoaders";
 import { buildResolvers } from "./buildResolvers";
 import { BuildOptions } from "./types/config";
