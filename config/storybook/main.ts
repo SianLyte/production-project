@@ -12,7 +12,7 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: "@storybook/react-webpack5",
-    options: {},
+    options: {projectId: "123"},
   },
   swc: () => ({
     jsc: {

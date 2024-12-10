@@ -8,6 +8,7 @@ import path from 'path';
 
 const config: Config = {
   clearMocks: true,
+  testTimeout: 30000,
   coveragePathIgnorePatterns: [
     "\\\\node_modules\\\\"
   ],

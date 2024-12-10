@@ -3,3 +3,4 @@ node_modules
 production-project-backup.tar.gz
 
 *storybook.log
+/storybook-static

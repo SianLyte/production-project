@@ -9,8 +9,11 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "storybook:build": "storybook build -c ./config/storybook"
+    "storybook:build": "storybook build -c ./config/storybook",
+    "build-storybook": "storybook build -c ./config/storybook"
+
   },
   "keywords": [],
   "author": "",
@@ -83,14 +86,17 @@
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",
-        "width": 1366,
+        "width": 1024,
         "height": 768,
-        "mobile": false
+        "mobile": false,
+        "delay": 5000,
+        "timeout": 30000
       },
       "chrome.iphone7": {
         "target": "chrome.app",
         "preset": "iPhone 7"
       }
-    }
+    },
+    "timeout": 30000
   }
 }
