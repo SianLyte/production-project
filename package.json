@@ -8,12 +8,10 @@
     "build:dev": "npx webpack --env mode=development",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
-    "test:ui:ok": "npx loki approve",
-    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:ci": "chromatic --exit-zero-on-changes --project-token chpt_86612796d76db92",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook"
-
   },
   "keywords": [],
   "author": "",
@@ -48,6 +46,7 @@
     "@types/webpack-dev-server": "^4.7.2",
     "babel-loader": "^9.2.1",
     "babel-plugin-i18next-extract": "^0.10.0",
+    "chromatic": "^11.20.0",
     "css-loader": "^6.10.0",
     "file-loader": "^6.2.0",
     "globals": "^15.13.0",
