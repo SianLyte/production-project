@@ -4,7 +4,7 @@ import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import Sun from "shared/assets/icons/sun.svg";
 import Moon from "shared/assets/icons/moon.svg";
 import { Button } from 'shared/ui/Button';
-import { ThemeButton } from 'shared/ui/Button/ui/Button';
+import { ButtonTheme } from 'shared/ui/Button/ui/Button';
 
 interface ThemeSwitcherProps {
   className?: string;
@@ -14,7 +14,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <Button theme={ThemeButton.CLEAR}
+    <Button theme={ButtonTheme.CLEAR}
       type='button'
       onClick={toggleTheme}
       className={classNames(cls.ThemeSwitcher, {}, [className])}

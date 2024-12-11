@@ -1,4 +1,3 @@
-import { Button } from "./ui/Button";
-import { ThemeButton } from "./ui/Button";
+import { ButtonTheme, ButtonSize, Button } from "./ui/Button";
 
-export { Button, ThemeButton }
+export { Button, ButtonTheme, ButtonSize }

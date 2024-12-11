@@ -14,13 +14,6 @@ import { PageLoader } from "widgets/PageLoader";
 const App = () => {
     const { theme } = useTheme();
 
-    useEffect(() => {
-        if (Math.random() < 0.5) {
-            console.log('pzdc');
-            throw new Error();    
-        }
-    }, [])
-
     return (
         <div className={classNames("app", {}, [theme])}>
             <Suspense fallback={<PageLoader/>}>
