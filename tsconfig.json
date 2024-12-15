@@ -1,6 +1,10 @@
 {
     "compilerOptions": {
         "outDir": "./dist/",
+        "lib": [
+            "ES2020",
+            "DOM"
+        ],
         //обязательно явно указывать тип
         "noImplicitAny": true,
         "module": "ESNext",

@@ -4,10 +4,9 @@ import { BuildOptions } from "./types/config";
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import {BundleAnalyzerPlugin} from "webpack-bundle-analyzer";
-import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
 
-export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
 
     const plugins = [
         new webpack.ProgressPlugin(),

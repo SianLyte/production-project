@@ -3,12 +3,14 @@
 @use "themes/normal.scss";
 @use "reset.scss";
 
-.app {
-    font: var(--font-m);
 
+body, .app {
+    font: var(--font-m);
     background: var(--bg-color);
     color: var(--primary-color);
+}
 
+.app {
     min-height: 100vh;
 }
 
