@@ -6,6 +6,7 @@ import { Navbar } from "widgets/navbar";
 import { Sidebar } from "widgets/sidebar";
 import { Suspense } from "react";
 import { PageLoader } from "widgets/PageLoader";
+import { Counter } from "entities/Counter";
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
             <Suspense fallback={<PageLoader />}>
                 <Navbar />
                 <div className="content-page">
+                    <Counter />
                     <Sidebar />
                     <AppRouter />
                 </div>

@@ -11,7 +11,7 @@ const config: Config = {
   testTimeout: 30000,
   coveragePathIgnorePatterns: [
     "\\\\node_modules\\\\"
-  ],
+  ], 
   moduleDirectories: [
     "node_modules"
   ],
@@ -41,7 +41,12 @@ const config: Config = {
     path.resolve(__dirname, "jestEmptyComponent.tsx"),
     '\\.(css|scss)$': 'identity-obj-proxy',
   },
-  setupFilesAfterEnv: ['<rootDir>/config/jest/jest.setup.ts']
+  setupFilesAfterEnv: ['<rootDir>/config/jest/jest.setup.ts'],
+
+  globals: {
+    "__IS_DEV__": true
+  },
+
 
 
   // All imported modules in your tests should be mocked automatically
@@ -102,7 +107,6 @@ const config: Config = {
   // globalTeardown: undefined,
 
   // A set of global variables that need to be available in all test environments
-  // globals: {},
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
   // maxWorkers: "50%",
