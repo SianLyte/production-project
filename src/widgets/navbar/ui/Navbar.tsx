@@ -1,9 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss'
 import { useCallback, useState } from 'react';
-import { Modal } from 'shared/ui/Modal';
 import { Button } from 'shared/ui/Button';
 import { useTranslation } from 'react-i18next';
+import { LoginModal } from 'features/AuthByUsername';
 
 interface NavbarProps {
     className?: string;
@@ -21,7 +21,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         <div className={classNames(cls.Navbar, {}, [className])}>
             <div className={cls.links}>
                 <Button onClick={onToggleModal}>{t("Войти")}</Button>
-                <Modal isOpen={isAuthModal} onClose={onToggleModal}><div>asd</div></Modal>
+                <LoginModal isOpen={isAuthModal} onClose={onToggleModal} />
             </div>
         </div>
     )

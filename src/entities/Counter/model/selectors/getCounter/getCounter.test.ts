@@ -6,6 +6,6 @@ describe("getCounter", () => {
     const state: Partial<StateSchema> = {
       counter: {value: 10}
     }
-    expect(getCounter(state)).toEqual({value: 10});
+    expect(getCounter(state as StateSchema)).toEqual({value: 10});
   })
 })
