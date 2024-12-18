@@ -12,7 +12,8 @@
     "test:ui:ci": "chromatic --exit-zero-on-changes --project-token chpt_86612796d76db92",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook"
+    "build-storybook": "storybook build -c ./config/storybook",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -77,6 +78,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
     "@reduxjs/toolkit": "^2.5.0",
     "@storybook/addon-styling-webpack": "^1.0.1",
+    "husky": "^9.1.7",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-http-backend": "^3.0.1",
