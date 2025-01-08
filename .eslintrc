@@ -9,6 +9,7 @@
     "space-in-parens": "warn",
     "space-before-function-paren": "warn",
     "react/react-in-jsx-scope": "off",
+    "react/display-name": "off"
   },
   "parser": "@typescript-eslint/parser",
   "env": {

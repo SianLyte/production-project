@@ -1,14 +1,16 @@
-import type { Preview, StoryObj, } from "@storybook/react";
+import type { Preview } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
 import { StyleDecorator } from "shared/config/storybook/StyleDecorator/StyleDecorator";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { TranslationDecorator } from "shared/config/storybook/TranslationDecorator/TranslationDecorator";
 
 const preview: Preview = {
   decorators: [
     StyleDecorator,
     ThemeDecorator(Theme.LIGHT),
-    RouterDecorator
+    RouterDecorator,
+    TranslationDecorator
   ],
   parameters: {
     controls: {

@@ -9,6 +9,8 @@ const enum AppRoutes {
     NOT_FOUND = "not_found"
 }
 
+
+
 const RoutePaths: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: "/",
     [AppRoutes.ABOUT]: "/about",
@@ -32,3 +34,4 @@ export const RouteConfig: Record<AppRoutes, RouteProps> = {
     },
 
 }
+

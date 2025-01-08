@@ -1,6 +1,6 @@
 import path from "path";
 import { BuildPaths } from "../build/types/config";
-import webpack, { RuleSetRule } from "webpack";
+import webpack, { DefinePlugin, RuleSetRule } from "webpack";
 import { buildCssLoader } from "../build/loaders/buildCssLoader";
 
 export default ({config}: {config: webpack.Configuration}) => {
@@ -12,6 +12,7 @@ export default ({config}: {config: webpack.Configuration}) => {
     src: path.resolve(__dirname, "../../src")
   }
   //absolute path
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   config.resolve.modules.push(paths.src),
   config.resolve.extensions.push(".ts", ".tsx");
 
@@ -30,6 +31,10 @@ export default ({config}: {config: webpack.Configuration}) => {
     test: /\.svg$/,
     use: ['@svgr/webpack'],
   });
+
+  config.plugins.push(new DefinePlugin({
+    __IS_DEV__: true
+  }))
 
   return config;
 } 
